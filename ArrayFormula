@@ -1,0 +1,6 @@
+=IF(ROWS(L$7:L7)>COUNTA(SupplierList),
+    "",
+     INDEX(SupplierList,SMALL(IF(SupplierList<>"",
+                                 ROW(SupplierList)-ROW(INDEX(SupplierList,1))+1,
+                                 ""),ROWS(L$7:L7)))
+   )
